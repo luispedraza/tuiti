@@ -1,11 +1,17 @@
 <% provide(:title, @user.name)%>
 <div class="row">
-  <aside class="span4">
-    <section>
-      <h1>
-        <%= gravatar_for @user %>
-        <%= @user.name %>
-      </h1>
-    </section>
-  </aside>
+	<aside class="span4">
+		<section>
+			<h1> <%= gravatar_for @user %>
+			<%= @user.name %> </h1>
+		</section>
+	</aside>
+	<div id="mapArea" style="height:250px; width:250px"></div>
+	<script src="http://www.openlayers.org/api/OpenLayers.js"></script>
+	<script>
+		map = new OpenLayers.Map("mapArea");
+		map.addLayer(new OpenLayers.Layer.OSM());
+		map.zoomToMaxExtent();
+
+	</script>
 </div>
