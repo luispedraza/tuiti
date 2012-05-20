@@ -1,11 +1,16 @@
 <header class="navbar navbar-fixed-top">
   <div class="navbar-inner">
     <div class="container">
-      <%= link_to "sample app", root_path, id: "logo" %>
+      <div> <%= link_to "COMOCUIDO", root_path, id: "logo" %>
+      		<%= link_to "lema" %>
+      </div>
       <nav>
         <ul class="nav pull-right">
           <li><%= link_to "Inicio", root_path %></li>
           <li><%= link_to "Ayuda", help_path %></li>
+           <li><%= link_to "Asesoramiento", root_path %></li>
+            <li><%= link_to "Intermediación", root_path %></li>
+             <li><%= link_to "Planificación", root_path %></li>
           <% if signed_in? %>
             <li><%= link_to "Usuarios", '#' %></li>
             <li id="fat-menu" class="dropdown">
